@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+    </head>
+
+    <body>
+
+        <h1>Multiplication Table</h1>
+        
+
+        
+        <script>
+            function criaTabela(n) {
+                let x = [];
+                const table = document.createElement('table');
+
+                for (let i = 0; i <= n; i++){
+                    const row = document.createElement('tr');
+                    for (let j = 0; j <= n; j++){
+                        const col = document.createElement('td');
+                        let val = i * j;
+                        if (val === 0) {
+                            val = i || j;
+                        }
+                        col.innerHTML = val;
+                        row.appendChild(col);
+                    }
+                    table.appendChild(row);
+                }
+
+                document.body.appendChild(table);
+                console.table(x)
+                // TODO: escrever dois loops aninhados para desenhar o array bidimencional e monstar o restante da tabela no console.
+            }
+        </script>
+    </body>
+</html>
