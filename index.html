@@ -13,29 +13,16 @@
         <script>
             function criaTabela(n) {
                 let x = [];
-                const table = document.createElement('table');
 
                 for (let i = 0; i <= n; i++){
-                    const row = document.createElement('tr');
-                    for (let j = 0; j <= n; j++){
-                        const col = document.createElement('td');
-                        let val = i * j;
-                        if (val === 0) {
-                            val = i || j;
-                        }
-                        col.innerHTML = val;
-                        row.appendChild(col);
+                    x[i] = [];
+
+                    for(let j = 0; j <= n; j++) {
+                        x[i][j] = i * j;
                     }
-                    table.appendChild(row);
                 }
 
-                document.body.appendChild(table);
                 console.table(x)
-                // Não sei como eu consegui mas ta funcionando, mais ou menos,
-                // eu vou deixar assim por enquanto porque preciso levar meu notbook
-                // para arrumar amanhã e não quero deixar atividades atrasadas
-                // e pretendo voltar a essa atividade assim que possivel e melhorar
-                // o resultado e tentar entender o que está acontecendo.
             }
         </script>
     </body>
